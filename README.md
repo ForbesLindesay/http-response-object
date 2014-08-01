@@ -2,9 +2,9 @@
 
 A simple object to represent an http response
 
-[![Build Status](https://travis-ci.org/ForbesLindesay/http-response-object.png?branch=master)](https://travis-ci.org/ForbesLindesay/http-response-object)
-[![Dependency Status](https://gemnasium.com/ForbesLindesay/http-response-object.png)](https://gemnasium.com/ForbesLindesay/http-response-object)
-[![NPM version](https://badge.fury.io/js/http-response-object.png)](http://badge.fury.io/js/http-response-object)
+[![Build Status](https://img.shields.io/travis/ForbesLindesay/http-response-object/master.svg)](https://travis-ci.org/ForbesLindesay/http-response-object)
+[![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/http-response-object.svg)](https://gemnasium.com/ForbesLindesay/http-response-object)
+[![NPM version](https://img.shields.io/npm/v/http-response-object.svg)](https://www.npmjs.org/package/http-response-object)
 
 ## Installation
 
