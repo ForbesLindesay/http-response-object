@@ -6,6 +6,7 @@ A simple object to represent an http response
 [![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/http-response-object.svg)](https://gemnasium.com/ForbesLindesay/http-response-object)
 [![NPM version](https://img.shields.io/npm/v/http-response-object.svg)](https://www.npmjs.org/package/http-response-object)
 
+
 ## Installation
 
     npm install http-response-object
