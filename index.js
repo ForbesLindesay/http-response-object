@@ -27,7 +27,7 @@ function Response(statusCode, headers, body) {
   this.body = body;
 }
 
-Response.prototype.getBody = function () {
+Response.prototype.getBody = function (encoding) {
   if (this.statusCode >= 300) {
     var err = new Error('Server responded with status code '
                     + this.statusCode + ':\n' + this.body.toString());
@@ -36,5 +36,5 @@ Response.prototype.getBody = function () {
     err.body = this.body;
     throw err;
   }
-  return this.body;
+  return encoding ? this.body.toString(encoding) : this.body;
 };
