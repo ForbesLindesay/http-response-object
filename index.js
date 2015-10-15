@@ -9,7 +9,7 @@ module.exports = Response;
  * @param {Object} headers
  * @param {Buffer} body
  */
-function Response(statusCode, headers, body) {
+function Response(statusCode, headers, body, url) {
   if (typeof statusCode !== 'number') {
     throw new TypeError('statusCode must be a number but was ' + (typeof statusCode));
   }
@@ -25,6 +25,7 @@ function Response(statusCode, headers, body) {
     this.headers[key.toLowerCase()] = headers[key];
   }
   this.body = body;
+  this.url = url;
 }
 
 Response.prototype.getBody = function (encoding) {
