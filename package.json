@@ -1,6 +1,6 @@
 {
   "name": "http-response-object",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple object to represent an http response",
   "keywords": [
     "http",
