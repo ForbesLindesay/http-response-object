@@ -8,6 +8,7 @@ module.exports = Response;
  * @param {Number} statusCode
  * @param {Object} headers
  * @param {Buffer} body
+ * @param {String} url
  */
 function Response(statusCode, headers, body, url) {
   if (typeof statusCode !== 'number') {
@@ -35,6 +36,7 @@ Response.prototype.getBody = function (encoding) {
     err.statusCode = this.statusCode;
     err.headers = this.headers;
     err.body = this.body;
+    err.url = this.url;
     throw err;
   }
   return encoding ? this.body.toString(encoding) : this.body;
