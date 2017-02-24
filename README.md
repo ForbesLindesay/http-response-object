@@ -1,5 +1,7 @@
 # http-response-object
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/http-response-object.svg)](https://greenkeeper.io/)
+
 A simple object to represent an http response
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/http-response-object/master.svg)](https://travis-ci.org/ForbesLindesay/http-response-object)
