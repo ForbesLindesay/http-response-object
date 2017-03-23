@@ -1,5 +1,7 @@
 'use strict';
 
+var Readable = require('stream').Readable;
+
 module.exports = Response;
 
 /**
@@ -11,6 +13,8 @@ module.exports = Response;
  * @param {String} url
  */
 function Response(statusCode, headers, body, url) {
+  Readable.call(this);
+
   if (typeof statusCode !== 'number') {
     throw new TypeError('statusCode must be a number but was ' + (typeof statusCode));
   }
@@ -27,6 +31,12 @@ function Response(statusCode, headers, body, url) {
   }
   this.body = body;
   this.url = url;
+}
+Response.prototype = Object.create(Readable.prototype);
+
+Response.prototype._read = function () {
+  this.push(this.body);
+  this.push(null);
 }
 
 Response.prototype.getBody = function (encoding) {
