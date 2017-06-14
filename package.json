@@ -14,7 +14,9 @@
     "request"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "tsc && flowgen lib/**/*",
+    "pretest": "npm run build",
     "test": "node test"
   },
   "repository": {
