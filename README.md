@@ -1,6 +1,6 @@
 # http-response-object
 
-A simple object to represent an http response
+A simple object to represent an http response (with flow and typescript types)
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/http-response-object/master.svg)](https://travis-ci.org/ForbesLindesay/http-response-object)
 [![Dependency Status](https://img.shields.io/david/ForbesLindesay/http-response-object.svg)](https://david-dm.org/ForbesLindesay/http-response-object)
