@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files":[
+    "lib"
+  ],
   "description": "A simple object to represent an http response",
   "keywords": [
     "http",
