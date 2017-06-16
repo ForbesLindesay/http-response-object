@@ -29,7 +29,7 @@
     "@types/node": "^7.0.31"
   },
   "devDependencies": {
-    "flowgen2": "^2.0.0-alpha.4",
+    "flowgen2": "^2.0.0-alpha.5",
     "typescript": "^2.3.4"
   }
 }

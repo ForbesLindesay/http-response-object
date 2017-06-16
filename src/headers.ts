@@ -1,3 +1,3 @@
 export type Headers = {
-  readonly [name: string]: string,
+  readonly [name: string]: string | string[],
 };
