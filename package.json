@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files":[
+  "files": [
     "lib"
   ],
   "description": "A simple object to represent an http response",
@@ -29,7 +29,7 @@
     "@types/node": "^7.0.31"
   },
   "devDependencies": {
-    "flowgen2": "^2.0.0-alpha.3",
+    "flowgen2": "^2.0.0-alpha.4",
     "typescript": "^2.3.4"
   }
 }

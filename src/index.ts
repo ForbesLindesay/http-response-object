@@ -3,12 +3,12 @@ import {Headers} from './headers';
 /**
  * A response from a web request
  */
-class Response {
+class Response<TBody> {
   readonly statusCode: number;
   readonly headers: Headers;
-  readonly body: Buffer | string;
+  readonly body: TBody;
   readonly url: string;
-  constructor(statusCode: number, headers: Headers, body: Buffer | string, url: string) {
+  constructor(statusCode: number, headers: Headers, body: TBody, url: string) {
     if (typeof statusCode !== 'number') {
       throw new TypeError('statusCode must be a number but was ' + (typeof statusCode));
     }
@@ -28,8 +28,8 @@ class Response {
     this.url = url;
   }
   getBody(encoding: string): string;
-  getBody(): Buffer | string;
-  getBody(encoding?: string): string | Buffer {
+  getBody(): TBody;
+  getBody(encoding?: string): TBody | string {
     if (this.statusCode >= 300) {
       var err = new Error('Server responded with status code '
                       + this.statusCode + ':\n' + this.body.toString());
@@ -39,7 +39,10 @@ class Response {
       (err as any).url = this.url;
       throw err;
     }
-    return encoding ? (this.body as any).toString(encoding) : this.body;
+    if (!encoding || typeof this.body === 'string') {
+      return this.body;
+    }
+    return (this.body as any).toString(encoding);
   }
 }
 
