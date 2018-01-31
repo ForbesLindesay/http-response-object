@@ -1,17 +1,22 @@
-import {Headers} from './headers';
+import {IncomingHttpHeaders} from 'http';
 
 /**
  * A response from a web request
  */
 class Response<TBody> {
   readonly statusCode: number;
-  readonly headers: Headers;
+  readonly headers: IncomingHttpHeaders;
   readonly body: TBody;
   readonly url: string;
-  constructor(statusCode: number, headers: Headers, body: TBody, url: string) {
+  constructor(
+    statusCode: number,
+    headers: IncomingHttpHeaders,
+    body: TBody,
+    url: string
+  ) {
     if (typeof statusCode !== 'number') {
       throw new TypeError(
-        'statusCode must be a number but was ' + typeof statusCode,
+        'statusCode must be a number but was ' + typeof statusCode
       );
     }
     if (headers === null) {
@@ -19,7 +24,7 @@ class Response<TBody> {
     }
     if (typeof headers !== 'object') {
       throw new TypeError(
-        'headers must be an object but was ' + typeof headers,
+        'headers must be an object but was ' + typeof headers
       );
     }
     this.statusCode = statusCode;
@@ -42,7 +47,7 @@ class Response<TBody> {
         'This request to ' +
           this.url +
           ' resulted in a status code of 0. This usually indicates some kind of network error in a browser (e.g. CORS not being set up or the DNS failing to resolve):\n' +
-          this.body.toString(),
+          this.body.toString()
       );
       (err as any).statusCode = this.statusCode;
       (err as any).headers = this.headers;
@@ -57,7 +62,7 @@ class Response<TBody> {
           ' with status code ' +
           this.statusCode +
           ':\n' +
-          this.body.toString(),
+          this.body.toString()
       );
       (err as any).statusCode = this.statusCode;
       (err as any).headers = this.headers;
