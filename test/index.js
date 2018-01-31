@@ -48,7 +48,7 @@ if (!errored) {
 }
 
 res = new Response(0, {}, '', 'http://example.com');
-assert((res.statusCode = 0));
+assert(res.statusCode === 0);
 assert(res.body === '');
 assert(res.url === 'http://example.com');
 var errored = false;
