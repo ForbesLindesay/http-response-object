@@ -26,7 +26,7 @@
   "author": "ForbesLindesay",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^10.0.3"
+    "@types/node": "^11.11.0"
   },
   "devDependencies": {
     "flowgen2": "^2.0.0-alpha.5",
