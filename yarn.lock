@@ -263,10 +263,10 @@ fill-range@^4.0.0:
     repeat-string "^1.6.1"
     to-regex-range "^2.1.0"
 
-flowgen2@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/flowgen2/-/flowgen2-2.2.1.tgz#67fbbf06a299e35ddf82c26e96359e1d251dcd32"
-  integrity sha512-7LG9UuDpXL/g9taO044o/1MRk1guJ2nr/7wDcennzYZfz1YQyepKNzYLLot8kHLgtQhFzGwzLKItH6RJ4EZZTw==
+flowgen2@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/flowgen2/-/flowgen2-2.2.2.tgz#f969537e865878060fac10e4faf5acae2629ab69"
+  integrity sha512-4baYP42wuuC0JUaxQIDdsaF0oAn7ioU9DxUvQdeUv+KIkdkn8XWWV9PWWlFYE9mHlk6cSyJ4sU82thLO4ElJvQ==
   dependencies:
     "@types/micromatch" "^2.3.29"
     "@types/node" "^7.0.31"
